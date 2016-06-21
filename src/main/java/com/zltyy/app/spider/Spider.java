@@ -33,7 +33,7 @@ import com.zltyy.app.utils.UrlManager;
 public class Spider {
 	
 	/**
-	 * get请求
+	 * get璇锋眰
 	 * @param url
 	 * @return
 	 * @throws Exception
@@ -62,7 +62,7 @@ public class Spider {
 	}
 	
 	/**
-	 * post请求
+	 * post璇锋眰
 	 * @param url
 	 * @param params
 	 * @return
@@ -85,7 +85,7 @@ public class Spider {
 	}
 	
 	/**
-	 * 返回这个标签所有属性及标签内容
+	 * 杩斿洖杩欎釜鏍囩鎵�湁灞炴�鍙婃爣绛惧唴瀹�
 	 * @param html
 	 * @param tag
 	 * @return
@@ -108,11 +108,12 @@ public class Spider {
 	}
 	
 	/**
-	 * 启动爬取程序
+	 * 鍚姩鐖彇绋嬪簭
 	 * @param url
 	 * @param tag
 	 * @throws Exception
 	 */
+	@SuppressWarnings("unchecked")
 	public void startSpider(String url,String...tag) throws Exception{
 		System.out.println("==="+tag.length);
 		UrlManager.addNewUrl(url);
@@ -133,7 +134,6 @@ public class Spider {
 		List<String> list = new ArrayList<String>();
 		for (Iterator<Object> iterator = p_list.iterator(); iterator.hasNext();) {
 			Map<String, String> m_p = (Map<String, String>) iterator.next();
-			System.out.println(m_p);
 			if(null != m_p.get("content")){
 				list.add(m_p.get("content"));
 			}
