@@ -23,7 +23,7 @@ public class JRJNewsSpider extends Spider{
 		Map<String, List<String>> map = HtmlManager.getContent();
 		List<String> list = map.get(url);
 		
-		String path = "src/main/resources/dic/stock_jrj.dic";
+		String path = "src/main/resources/dic/jrj_stock.dic";
 		Forest forest = Library.makeForest(path);
 		Map<String, Integer> m = new HashMap<String, Integer>();
 		for (String str : list) {
